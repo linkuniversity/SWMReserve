@@ -1,0 +1,11 @@
+{
+    "room" : "5회의실",
+    "date" : "2017-03-23",
+    "start_time" : "13",
+    "end_time" : "17",
+    "member_number" : "10069",
+    "name" : "장선혁",
+    "phone" : "01024951163",
+    "contents" : "프로젝트 회의", 
+    "attend_num" : "5"
+}
