@@ -7,5 +7,6 @@
     "name" : "장선혁",
     "phone" : "01024951163",
     "contents" : "프로젝트 회의", 
-    "attend_num" : "5"
+    "attend_num" : "5",
+    "chromedriver_src":'/usr/local/chromedriver'
 }

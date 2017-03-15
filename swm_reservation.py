@@ -9,11 +9,6 @@ USAGE --
 python3 swm_reservation.py
 """
 
-chromedriver_src = '/usr/local/chromedriver'
-
-driver = webdriver.Chrome(chromedriver_src)
-driver.get('http://115.68.116.16/swmaestro/reservation.html')
-
 data = None
 
 try:
@@ -23,6 +18,9 @@ try:
 except FileNotFoundError:
     print("Cannot find ./reserve_config.json!!")
     exit()
+
+driver = webdriver.Chrome(data["chromedriver_src"])
+driver.get('http://115.68.116.16/swmaestro/reservation.html')
 
 name = driver.find_element_by_name("name1")
 name.send_keys(data["name"])
@@ -56,12 +54,6 @@ member_num.send_keys(data["member_number"])
 
 confirm_btn = driver.find_element_by_xpath("//button[@class='btn btn-primary']")
 confirm_btn.click()
-
-driver.implicitly_wait(5)
-driver.quit()
-
-driver = webdriver.Chrome(chromedriver_src)
-driver.get('http://115.68.116.16/swmaestro/reservation_status.html')
 
 reserved_picker = driver.find_element_by_id("datepicker")
 reserved_picker.clear()
